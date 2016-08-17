@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="default" namespace="/user" extends="struts-default">
+
+	<action name="addUser" class="scau.com.action.UserAction" method="save">
+		<result name="success">/listUser.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	<action name="queryUser" class="scau.com.action.UserAction" method="queryUser">
+		<result name="success">/listUser.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	<action name="viewUser" class="scau.com.action.UserAction" method="viewUser">
+		<result name="success">/viewUser.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	<action name="loadEdit" class="scau.com.action.UserAction" method="loadEdit">
+		<result name="success">/editUser.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	<action name="editSaveUser" class="scau.com.action.UserAction" method="editSaveUser">
+		<result name="success" type="redirectAction">/user/queryUser.action</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	<action name="deleteUser" class="scau.com.action.UserAction" method="deleteUser">
+		<result name="success" type="redirectAction">/user/queryUser.action</result>
+		<result name="error">/error.jsp</result>
+	</action>
+    
+
+</package>
+
+</struts>

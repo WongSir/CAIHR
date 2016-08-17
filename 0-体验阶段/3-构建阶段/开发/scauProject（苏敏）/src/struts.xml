@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+	<package name="reg" namespace="/register" extends="struts-default" >
+	
+		<action name="addRegister" class="scau.com.action.RegisterAction" method="addRegister">
+			<result name="success">/BackSite/successRegister.jsp</result>
+			<result name="error">/BackSite/failRegister.jsp</result>
+		</action>
+		
+		<action name="listRegister" class="scau.com.action.RegisterAction" method="listRegister">
+			<result name="success">/BackSite/listRegister.jsp</result>
+			<result name="error">/BackSite/failRegister.jsp</result>
+		</action>
+		
+		<action name="showRegister" class="scau.com.action.RegisterAction" method="showRegisterById">
+			<result name="success">/BackSite/showRegister.jsp</result>
+			<result name="error">/BackSite/failRegister.jsp</result>
+		</action>
+		
+		<action name="delRegister" class="scau.com.action.RegisterAction" method="delRegister">
+			<result name="success">/BackSite/successRegister.jsp</result>
+			<result name="error">/BackSite/failRegister.jsp</result>
+		</action>
+	
+	</package>
+
+	<package name="gz" namespace="/gzPlan" extends="struts-default" >
+	
+		<action name="addGzPlan" class="scau.com.action.GzPlanAction" method="addGzPlan">
+			<result name="success">/BackSite/successGzPlan.jsp</result>
+			<result name="error">/BackSite/failGzPlan.jsp</result>
+		</action>
+		
+		<action name="listGzPlan" class="scau.com.action.GzPlanAction" method="listGzPlan">
+			<result name="success">/BackSite/listGzPlan.jsp</result>
+			<result name="error">/BackSite/failGzPlan.jsp</result>
+		</action>
+		
+		<action name="showGzPlan" class="scau.com.action.GzPlanAction" method="showGzPlanById">
+			<result name="success">/BackSite/showGzPlan.jsp</result>
+			<result name="error">/BackSite/failGzPlan.jsp</result>
+		</action>
+		
+		<action name="delGzPlan" class="scau.com.action.GzPlanAction" method="delGzPlan">
+			<result name="success">/BackSite/successGzPlan.jsp</result>
+			<result name="error">/BackSite/failGzPlan.jsp</result>
+		</action>
+	
+	</package>
+	
+</struts>

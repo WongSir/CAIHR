@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" namespace="/contract" extends="struts-default">
+
+
+
+
+
+		<!-- <action name="*_*" class="scau.com.action.{1}Action" method="{2}"> 
+			<result name="success">/BackSite/ListContract.jsp</result> <result name="error">/error.jsp</result> 
+			<result name="ok">/{1}{2}.jsp</result> </action> <action name="queryContract" 
+			class="scau.com.action.ContractAction" method="queryContract"> <result name="success">/BackSite/ListContract.jsp</result> 
+			<result name="error">/error.jsp</result> </action> -->
+
+
+
+
+		<action name="queryContract" class="scau.com.action.ContractAction"
+			method="queryContract">
+			<result name="success">/BackSite/ListContract.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="addContract" class="scau.com.action.ContractAction"
+			method="addContract">
+			<result name="success" type="redirectAction">/contract/queryContract.action
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="deleteContract" class="scau.com.action.ContractAction"
+			method="deleteContract">
+			<result name="success" type="redirectAction">/contract/queryContract.action
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="modifiedContract" class="scau.com.action.ContractAction"
+			method="modifiedContract">
+			<result name="success" type="redirectAction">/contract/queryContract.action
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="loadContract" class="scau.com.action.ContractAction"
+			method="loadContract">
+			<result name="success">/BackSite/ModifiedEmployeeContract.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>
